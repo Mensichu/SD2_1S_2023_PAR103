@@ -1,0 +1,58 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity teclado_matricial is
+port(clock: in std_logic;
+	Ent: in std_logic_vector(3 downto 0);
+	Sal: out std_logic_vector(3 downto 0);
+	Teclado: out std_logic_vector(3 downto 0));
+	
+end teclado_matricial;
+	
+architecture desarrollo of teclado_matricial is
+signal temp: std_logic_vector(3 downto 0);
+
+begin
+	process(clock)
+	begin
+		if (clock'event and clock='1') then
+			if temp="0000" then 
+				temp<="0001";
+				Sal<="0001";
+			elsif temp="0001" then 
+				temp<="0010";
+				Sal<="0010";
+			elsif temp="0010" then 
+				temp<="0100";
+				Sal<="0100";
+			elsif temp="0100" then 
+				temp<="1000";
+				Sal<="1000";
+			elsif temp="1000" then 
+				temp<="0000";
+				Sal<="0000";
+			end if;
+		end if;
+	
+	
+	end process;
+	
+	process(Ent)
+	begin
+		if (clock'event and clock='1') then
+			if temp="0000" and Ent="0001" then
+				Teclado<="0001";
+			elsif temp="0000" and Ent="0010" then 
+				Teclado<="0010";
+			elsif temp="0000" and Ent="0100" then 
+				Teclado<="0100";
+			elsif temp="0000" and Ent="1000" then 
+				Teclado<="1000";
+			end if;
+		end if;
+	
+	
+	end process;
+	
+end desarrollo;

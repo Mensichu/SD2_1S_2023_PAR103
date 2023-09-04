@@ -1,0 +1,550 @@
+Analysis & Synthesis report for Test_Entrada_Salidas
+Mon Sep 04 11:37:22 2023
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Proyecto_Test1|mss:inst3|y
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Sep 04 11:37:22 2023       ;
+; Quartus Prime Version           ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
+; Revision Name                   ; Test_Entrada_Salidas                        ;
+; Top-level Entity Name           ; Proyecto_Test1                              ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 238                                         ;
+; Total pins                      ; 64                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                               ;
++---------------------------------------------------------------------------------+--------------------+----------------------+
+; Option                                                                          ; Setting            ; Default Value        ;
++---------------------------------------------------------------------------------+--------------------+----------------------+
+; Device                                                                          ; 5CSXFC6D6F31C6     ;                      ;
+; Top-level entity name                                                           ; Proyecto_Test1     ; Test_Entrada_Salidas ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V            ;
+; Use smart compilation                                                           ; Off                ; Off                  ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                   ;
+; Enable compact report table                                                     ; Off                ; Off                  ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto                 ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                  ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                  ;
+; Preserve fewer node names                                                       ; On                 ; On                   ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable               ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001         ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993            ;
+; State Machine Processing                                                        ; Auto               ; Auto                 ;
+; Safe State Machine                                                              ; Off                ; Off                  ;
+; Extract Verilog State Machines                                                  ; On                 ; On                   ;
+; Extract VHDL State Machines                                                     ; On                 ; On                   ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                  ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000                 ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                  ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                   ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                   ;
+; Parallel Synthesis                                                              ; On                 ; On                   ;
+; DSP Block Balancing                                                             ; Auto               ; Auto                 ;
+; NOT Gate Push-Back                                                              ; On                 ; On                   ;
+; Power-Up Don't Care                                                             ; On                 ; On                   ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                  ;
+; Remove Duplicate Registers                                                      ; On                 ; On                   ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                  ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                  ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                  ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                  ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                  ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                   ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                  ;
+; Optimization Technique                                                          ; Balanced           ; Balanced             ;
+; Carry Chain Length                                                              ; 70                 ; 70                   ;
+; Auto Carry Chains                                                               ; On                 ; On                   ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                   ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                  ;
+; Auto ROM Replacement                                                            ; On                 ; On                   ;
+; Auto RAM Replacement                                                            ; On                 ; On                   ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                   ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto                 ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto                 ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                   ;
+; Strict RAM Replacement                                                          ; Off                ; Off                  ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                   ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                  ;
+; Auto Resource Sharing                                                           ; Off                ; Off                  ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                  ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                  ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                  ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                   ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                  ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                   ;
+; Report Parameter Settings                                                       ; On                 ; On                   ;
+; Report Source Assignments                                                       ; On                 ; On                   ;
+; Report Connectivity Checks                                                      ; On                 ; On                   ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                  ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                    ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation   ;
+; HDL message level                                                               ; Level2             ; Level2               ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                  ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000                 ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000                 ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                  ;
+; Clock MUX Protection                                                            ; On                 ; On                   ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                  ;
+; Block Design Naming                                                             ; Auto               ; Auto                 ;
+; SDC constraint protection                                                       ; Off                ; Off                  ;
+; Synthesis Effort                                                                ; Auto               ; Auto                 ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                   ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                  ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium               ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto                 ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                   ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                   ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                  ;
++---------------------------------------------------------------------------------+--------------------+----------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 20          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-12        ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                           ;
++----------------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path       ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                           ; Library ;
++----------------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------+---------+
+; Bloques/Antirebote_ms2.vhd             ; yes             ; User VHDL File                     ; C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/Antirebote_ms2.vhd             ;         ;
+; Bloques/RegistroSostenimiento4Bits.vhd ; yes             ; User VHDL File                     ; C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/RegistroSostenimiento4Bits.vhd ;         ;
+; Bloques/Act_Display.vhd                ; yes             ; User VHDL File                     ; C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/Act_Display.vhd                ;         ;
+; Bloques/teclado_matricial.vhd          ; yes             ; User VHDL File                     ; C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/teclado_matricial.vhd          ;         ;
+; Bloques/mss.vhd                        ; yes             ; User VHDL File                     ; C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/mss.vhd                        ;         ;
+; Bloques/ANTIREBOTE.vhd                 ; yes             ; User VHDL File                     ; C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/ANTIREBOTE.vhd                 ;         ;
+; Proyecto_Test1.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Proyecto_Test1.bdf                     ;         ;
+; Bloques/contador.vhd                   ; yes             ; User VHDL File                     ; C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/contador.vhd                   ;         ;
+; output_files/comparador.vhd            ; yes             ; User VHDL File                     ; C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/output_files/comparador.vhd            ;         ;
+; output_files/clock_div_50_mhz.vhd      ; yes             ; User VHDL File                     ; C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/output_files/clock_div_50_mhz.vhd      ;         ;
+; Bloques/FlipFlopJK.vhd                 ; yes             ; User VHDL File                     ; C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/FlipFlopJK.vhd                 ;         ;
+; Bloques/contador1min.vhd               ; yes             ; User VHDL File                     ; C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/contador1min.vhd               ;         ;
+; Bloques/comparador1min.vhd             ; yes             ; User VHDL File                     ; C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/comparador1min.vhd             ;         ;
+; Bloques/contador10min.vhd              ; yes             ; User VHDL File                     ; C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/contador10min.vhd              ;         ;
+; Bloques/comparador10min.vhd            ; yes             ; User VHDL File                     ; C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/comparador10min.vhd            ;         ;
+; Bloques/Validacion.vhd                 ; yes             ; User VHDL File                     ; C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/Validacion.vhd                 ;         ;
+; Bloques/num_Display.vhd                ; yes             ; User VHDL File                     ; C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/num_Display.vhd                ;         ;
+; Bloques/Delay1.vhd                     ; yes             ; User VHDL File                     ; C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/Delay1.vhd                     ;         ;
+; Bloques/Delay2.vhd                     ; yes             ; User VHDL File                     ; C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/Delay2.vhd                     ;         ;
++----------------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                       ;
++---------------------------------------------+---------------------+
+; Resource                                    ; Usage               ;
++---------------------------------------------+---------------------+
+; Estimate of Logic utilization (ALMs needed) ; 192                 ;
+;                                             ;                     ;
+; Combinational ALUT usage for logic          ; 347                 ;
+;     -- 7 input functions                    ; 0                   ;
+;     -- 6 input functions                    ; 36                  ;
+;     -- 5 input functions                    ; 41                  ;
+;     -- 4 input functions                    ; 67                  ;
+;     -- <=3 input functions                  ; 203                 ;
+;                                             ;                     ;
+; Dedicated logic registers                   ; 238                 ;
+;                                             ;                     ;
+; I/O pins                                    ; 64                  ;
+;                                             ;                     ;
+; Total DSP Blocks                            ; 0                   ;
+;                                             ;                     ;
+; Maximum fan-out node                        ; clock_50_AF14~input ;
+; Maximum fan-out                             ; 238                 ;
+; Total fan-out                               ; 2202                ;
+; Average fan-out                             ; 3.09                ;
++---------------------------------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                             ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------+----------------------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                               ; Entity Name                ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------+----------------------------+--------------+
+; |Proyecto_Test1                        ; 347 (4)             ; 238 (0)                   ; 0                 ; 0          ; 64   ; 0            ; |Proyecto_Test1                                   ; Proyecto_Test1             ; work         ;
+;    |ANTIREBOTE:inst38|                 ; 2 (2)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |Proyecto_Test1|ANTIREBOTE:inst38                 ; ANTIREBOTE                 ; work         ;
+;    |ANTIREBOTE:inst|                   ; 2 (2)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |Proyecto_Test1|ANTIREBOTE:inst                   ; ANTIREBOTE                 ; work         ;
+;    |Antirebote_ms2:inst30|             ; 52 (52)             ; 37 (37)                   ; 0                 ; 0          ; 0    ; 0            ; |Proyecto_Test1|Antirebote_ms2:inst30             ; Antirebote_ms2             ; work         ;
+;    |Delay1:inst37|                     ; 40 (40)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |Proyecto_Test1|Delay1:inst37                     ; Delay1                     ; work         ;
+;    |Delay2:inst42|                     ; 40 (40)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |Proyecto_Test1|Delay2:inst42                     ; Delay2                     ; work         ;
+;    |FlipFlopJK:inst23|                 ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Proyecto_Test1|FlipFlopJK:inst23                 ; FlipFlopJK                 ; work         ;
+;    |FlipFlopJK:inst27|                 ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Proyecto_Test1|FlipFlopJK:inst27                 ; FlipFlopJK                 ; work         ;
+;    |FlipFlopJK:inst32|                 ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Proyecto_Test1|FlipFlopJK:inst32                 ; FlipFlopJK                 ; work         ;
+;    |RegistroSostenimiento4Bits:inst29| ; 62 (62)             ; 50 (50)                   ; 0                 ; 0          ; 0    ; 0            ; |Proyecto_Test1|RegistroSostenimiento4Bits:inst29 ; RegistroSostenimiento4Bits ; work         ;
+;    |clock_div_50_mhz:inst10|           ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |Proyecto_Test1|clock_div_50_mhz:inst10           ; clock_div_50_mhz           ; work         ;
+;    |contador10min:inst34|              ; 15 (15)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |Proyecto_Test1|contador10min:inst34              ; contador10min              ; work         ;
+;    |contador1min:inst18|               ; 11 (11)             ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |Proyecto_Test1|contador1min:inst18               ; contador1min               ; work         ;
+;    |contador1min:inst2|                ; 11 (11)             ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |Proyecto_Test1|contador1min:inst2                ; contador1min               ; work         ;
+;    |contador:inst7|                    ; 6 (6)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |Proyecto_Test1|contador:inst7                    ; contador                   ; work         ;
+;    |mss:inst3|                         ; 17 (17)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |Proyecto_Test1|mss:inst3                         ; mss                        ; work         ;
+;    |num_Display:inst41|                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Proyecto_Test1|num_Display:inst41                ; num_Display                ; work         ;
+;    |num_Display:inst55|                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Proyecto_Test1|num_Display:inst55                ; num_Display                ; work         ;
+;    |num_Display:inst56|                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Proyecto_Test1|num_Display:inst56                ; num_Display                ; work         ;
+;    |num_Display:inst57|                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Proyecto_Test1|num_Display:inst57                ; num_Display                ; work         ;
+;    |teclado_matricial:inst15|          ; 22 (22)             ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Proyecto_Test1|teclado_matricial:inst15          ; teclado_matricial          ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------+----------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------+
+; State Machine - |Proyecto_Test1|mss:inst3|y                                              ;
++------+------+------+------+------+------+------+------+------+------+------+------+------+
+; Name ; y.Tl ; y.Tk ; y.Tj ; y.Ti ; y.Th ; y.Tg ; y.Tf ; y.Te ; y.Td ; y.Tc ; y.Tb ; y.Ta ;
++------+------+------+------+------+------+------+------+------+------+------+------+------+
+; y.Ta ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ;
+; y.Tb ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ; 1    ;
+; y.Tc ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ; 0    ; 1    ;
+; y.Td ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ; 0    ; 0    ; 1    ;
+; y.Te ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ; 0    ; 0    ; 0    ; 1    ;
+; y.Tf ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.Tg ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.Th ; 0    ; 0    ; 0    ; 0    ; 1    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.Ti ; 0    ; 0    ; 0    ; 1    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.Tj ; 0    ; 0    ; 1    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.Tk ; 0    ; 1    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.Tl ; 1    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
++------+------+------+------+------+------+------+------+------+------+------+------+------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                 ;
++----------------------------------------------------+---------------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal                   ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------------------------+------------------------+
+; teclado_matricial:inst15|tempTecla[3]              ; teclado_matricial:inst15|tempTecla[3] ; yes                    ;
+; teclado_matricial:inst15|tempTecla[2]              ; teclado_matricial:inst15|tempTecla[3] ; yes                    ;
+; teclado_matricial:inst15|tempTecla[1]              ; teclado_matricial:inst15|tempTecla[3] ; yes                    ;
+; teclado_matricial:inst15|tempTecla[0]              ; teclado_matricial:inst15|tempTecla[3] ; yes                    ;
+; Number of user-specified and inferred latches = 4  ;                                       ;                        ;
++----------------------------------------------------+---------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                  ;
++---------------------------------------+---------------------------------------------+
+; Register name                         ; Reason for Removal                          ;
++---------------------------------------+---------------------------------------------+
+; teclado_matricial:inst15|temp[3]      ; Merged with teclado_matricial:inst15|Sal[3] ;
+; teclado_matricial:inst15|temp[2]      ; Merged with teclado_matricial:inst15|Sal[2] ;
+; teclado_matricial:inst15|temp[1]      ; Merged with teclado_matricial:inst15|Sal[1] ;
+; teclado_matricial:inst15|temp[0]      ; Merged with teclado_matricial:inst15|Sal[0] ;
+; Total Number of Removed Registers = 4 ;                                             ;
++---------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 238   ;
+; Number of registers using Synchronous Clear  ; 160   ;
+; Number of registers using Synchronous Load   ; 1     ;
+; Number of registers using Asynchronous Clear ; 194   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 167   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; teclado_matricial:inst15|Sal[0]        ; 10      ;
+; Antirebote_ms2:inst30|tecl_out[1]      ; 4       ;
+; Antirebote_ms2:inst30|tecl_out[0]      ; 4       ;
+; Antirebote_ms2:inst30|tecl_out[2]      ; 4       ;
+; Antirebote_ms2:inst30|tecl_out[3]      ; 4       ;
+; Total number of inverted registers = 5 ;         ;
++----------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Proyecto_Test1|RegistroSostenimiento4Bits:inst29|n[2] ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |Proyecto_Test1|Delay1:inst37|contador[9]              ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |Proyecto_Test1|Delay2:inst42|contador[3]              ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |Proyecto_Test1|contador1min:inst2|temp[5]             ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |Proyecto_Test1|contador10min:inst34|temp[8]           ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Proyecto_Test1|contador:inst7|temp[0]                 ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |Proyecto_Test1|contador1min:inst18|temp[3]            ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |Proyecto_Test1|Antirebote_ms2:inst30|contador[7]      ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |Proyecto_Test1|teclado_matricial:inst15|Sal[3]        ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Proyecto_Test1|Antirebote_ms2:inst30|tecl_out[3]      ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 9 LEs                ; 0 LEs                  ; No         ; |Proyecto_Test1|num_Display:inst57|SEG[0]              ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 9 LEs                ; 0 LEs                  ; No         ; |Proyecto_Test1|num_Display:inst56|SEG[6]              ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 9 LEs                ; 0 LEs                  ; No         ; |Proyecto_Test1|num_Display:inst55|SEG[5]              ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 9 LEs                ; 0 LEs                  ; No         ; |Proyecto_Test1|num_Display:inst41|SEG[6]              ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Proyecto_Test1|num_Display:inst57|SEG[3]              ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Proyecto_Test1|num_Display:inst56|SEG[4]              ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Proyecto_Test1|num_Display:inst55|SEG[3]              ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Proyecto_Test1|num_Display:inst41|SEG[3]              ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |Proyecto_Test1|num_Display:inst57|SEG[1]              ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |Proyecto_Test1|num_Display:inst56|SEG[1]              ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |Proyecto_Test1|num_Display:inst55|SEG[1]              ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |Proyecto_Test1|num_Display:inst41|SEG[2]              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 238                         ;
+;     CLR               ; 26                          ;
+;     CLR SLD           ; 1                           ;
+;     ENA CLR           ; 32                          ;
+;     ENA CLR SCLR      ; 135                         ;
+;     SCLR              ; 25                          ;
+;     plain             ; 19                          ;
+; arriav_lcell_comb     ; 350                         ;
+;     arith             ; 160                         ;
+;         1 data inputs ; 160                         ;
+;     normal            ; 190                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 20                          ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 16                          ;
+;         4 data inputs ; 67                          ;
+;         5 data inputs ; 41                          ;
+;         6 data inputs ; 36                          ;
+; boundary_port         ; 64                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.10                        ;
+; Average LUT depth     ; 2.66                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+    Info: Processing started: Mon Sep 04 11:37:13 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Test_Entrada_Salidas -c Test_Entrada_Salidas
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file bloques/antirebote_ms2.vhd
+    Info (12022): Found design unit 1: Antirebote_ms2-Behavioral File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/Antirebote_ms2.vhd Line: 15
+    Info (12023): Found entity 1: Antirebote_ms2 File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/Antirebote_ms2.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file bloques/registrosostenimiento4bits.vhd
+    Info (12022): Found design unit 1: RegistroSostenimiento4Bits-Behavioral File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/RegistroSostenimiento4Bits.vhd Line: 17
+    Info (12023): Found entity 1: RegistroSostenimiento4Bits File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/RegistroSostenimiento4Bits.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file bloques/registro_sostenimiento4.vhd
+    Info (12022): Found design unit 1: Registro_Sostenimiento4-Behavioral File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/Registro_Sostenimiento4.vhd Line: 16
+    Info (12023): Found entity 1: Registro_Sostenimiento4 File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/Registro_Sostenimiento4.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file bloques/act_display.vhd
+    Info (12022): Found design unit 1: Act_Display-behavioral File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/Act_Display.vhd Line: 11
+    Info (12023): Found entity 1: Act_Display File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/Act_Display.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file bloques/teclado_matricial.vhd
+    Info (12022): Found design unit 1: teclado_matricial-desarrollo File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/teclado_matricial.vhd Line: 14
+    Info (12023): Found entity 1: teclado_matricial File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/teclado_matricial.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file bloques/mss.vhd
+    Info (12022): Found design unit 1: mss-solucion File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/mss.vhd Line: 14
+    Info (12023): Found entity 1: mss File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/mss.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file bloques/clock_div_10_mhz.vhd
+    Info (12022): Found design unit 1: CLOCK_DIV_10_MHz-a File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/CLOCK_DIV_10_MHz.vhd Line: 18
+    Info (12023): Found entity 1: CLOCK_DIV_10_MHz File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/CLOCK_DIV_10_MHz.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file bloques/reloj.vhd
+    Info (12022): Found design unit 1: RELOJ-a File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/RELOJ.VHD Line: 16
+    Info (12023): Found entity 1: RELOJ File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/RELOJ.VHD Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file bloques/antirebote.vhd
+    Info (12022): Found design unit 1: ANTIREBOTE-a File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/ANTIREBOTE.vhd Line: 12
+    Info (12023): Found entity 1: ANTIREBOTE File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/ANTIREBOTE.vhd Line: 7
+Info (12021): Found 1 design units, including 1 entities, in source file proyecto_test1.bdf
+    Info (12023): Found entity 1: Proyecto_Test1
+Info (12021): Found 2 design units, including 1 entities, in source file bloques/contador.vhd
+    Info (12022): Found design unit 1: contador-desarrollo File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/contador.vhd Line: 12
+    Info (12023): Found entity 1: contador File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/contador.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file output_files/comparador.vhd
+    Info (12022): Found design unit 1: comparador-desarrollo File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/output_files/comparador.vhd Line: 12
+    Info (12023): Found entity 1: comparador File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/output_files/comparador.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file output_files/clock_div_50_mhz.vhd
+    Info (12022): Found design unit 1: clock_div_50_mhz-rtl File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/output_files/clock_div_50_mhz.vhd Line: 11
+    Info (12023): Found entity 1: clock_div_50_mhz File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/output_files/clock_div_50_mhz.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file bloques/flipflopjk.vhd
+    Info (12022): Found design unit 1: FlipFlopJK-Behavioral File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/FlipFlopJK.vhd Line: 11
+    Info (12023): Found entity 1: FlipFlopJK File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/FlipFlopJK.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file bloques/contador1min.vhd
+    Info (12022): Found design unit 1: contador1min-desarrollo File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/contador1min.vhd Line: 12
+    Info (12023): Found entity 1: contador1min File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/contador1min.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file bloques/comparador1min.vhd
+    Info (12022): Found design unit 1: comparador1min-desarrollo File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/comparador1min.vhd Line: 12
+    Info (12023): Found entity 1: comparador1min File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/comparador1min.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file bloques/contador10min.vhd
+    Info (12022): Found design unit 1: contador10min-desarrollo File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/contador10min.vhd Line: 12
+    Info (12023): Found entity 1: contador10min File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/contador10min.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file bloques/comparador10min.vhd
+    Info (12022): Found design unit 1: comparador10min-desarrollo File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/comparador10min.vhd Line: 12
+    Info (12023): Found entity 1: comparador10min File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/comparador10min.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file bloques/validacion.vhd
+    Info (12022): Found design unit 1: Validacion-Behavioral File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/Validacion.vhd Line: 17
+    Info (12023): Found entity 1: Validacion File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/Validacion.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file bloques/num_display.vhd
+    Info (12022): Found design unit 1: num_Display-behavioral File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/num_Display.vhd Line: 12
+    Info (12023): Found entity 1: num_Display File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/num_Display.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file bloques/delay1.vhd
+    Info (12022): Found design unit 1: Delay1-Behavioral File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/Delay1.vhd Line: 13
+    Info (12023): Found entity 1: Delay1 File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/Delay1.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file bloques/delay2.vhd
+    Info (12022): Found design unit 1: Delay2-Behavioral File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/Delay2.vhd Line: 13
+    Info (12023): Found entity 1: Delay2 File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/Delay2.vhd Line: 5
+Info (12127): Elaborating entity "Proyecto_Test1" for the top level hierarchy
+Info (12128): Elaborating entity "clock_div_50_mhz" for hierarchy "clock_div_50_mhz:inst10"
+Info (12128): Elaborating entity "RegistroSostenimiento4Bits" for hierarchy "RegistroSostenimiento4Bits:inst29"
+Warning (10492): VHDL Process Statement warning at RegistroSostenimiento4Bits.vhd(28): signal "resetn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/RegistroSostenimiento4Bits.vhd Line: 28
+Info (12128): Elaborating entity "mss" for hierarchy "mss:inst3"
+Info (12128): Elaborating entity "ANTIREBOTE" for hierarchy "ANTIREBOTE:inst"
+Info (12128): Elaborating entity "FlipFlopJK" for hierarchy "FlipFlopJK:inst23"
+Info (12128): Elaborating entity "comparador" for hierarchy "comparador:inst9"
+Info (12128): Elaborating entity "contador" for hierarchy "contador:inst7"
+Warning (10492): VHDL Process Statement warning at contador.vhd(18): signal "resetn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/contador.vhd Line: 18
+Warning (10492): VHDL Process Statement warning at contador.vhd(19): signal "clock" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/contador.vhd Line: 19
+Info (12128): Elaborating entity "comparador1min" for hierarchy "comparador1min:inst19"
+Info (12128): Elaborating entity "contador1min" for hierarchy "contador1min:inst18"
+Warning (10492): VHDL Process Statement warning at contador1min.vhd(18): signal "resetn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/contador1min.vhd Line: 18
+Warning (10492): VHDL Process Statement warning at contador1min.vhd(19): signal "clock" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/contador1min.vhd Line: 19
+Info (12128): Elaborating entity "comparador10min" for hierarchy "comparador10min:inst35"
+Info (12128): Elaborating entity "contador10min" for hierarchy "contador10min:inst34"
+Warning (10492): VHDL Process Statement warning at contador10min.vhd(18): signal "resetn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/contador10min.vhd Line: 18
+Warning (10492): VHDL Process Statement warning at contador10min.vhd(19): signal "clock" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/contador10min.vhd Line: 19
+Info (12128): Elaborating entity "Validacion" for hierarchy "Validacion:inst39"
+Info (12128): Elaborating entity "Delay1" for hierarchy "Delay1:inst37"
+Warning (10492): VHDL Process Statement warning at Delay1.vhd(20): signal "resetn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/Delay1.vhd Line: 20
+Info (12128): Elaborating entity "Delay2" for hierarchy "Delay2:inst42"
+Warning (10492): VHDL Process Statement warning at Delay2.vhd(20): signal "resetn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/Delay2.vhd Line: 20
+Info (12128): Elaborating entity "Antirebote_ms2" for hierarchy "Antirebote_ms2:inst30"
+Warning (10492): VHDL Process Statement warning at Antirebote_ms2.vhd(22): signal "resetn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/Antirebote_ms2.vhd Line: 22
+Info (12128): Elaborating entity "teclado_matricial" for hierarchy "teclado_matricial:inst15"
+Warning (10492): VHDL Process Statement warning at teclado_matricial.vhd(45): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/teclado_matricial.vhd Line: 45
+Warning (10492): VHDL Process Statement warning at teclado_matricial.vhd(58): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/teclado_matricial.vhd Line: 58
+Warning (10492): VHDL Process Statement warning at teclado_matricial.vhd(71): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/teclado_matricial.vhd Line: 71
+Warning (10492): VHDL Process Statement warning at teclado_matricial.vhd(84): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/teclado_matricial.vhd Line: 84
+Warning (10492): VHDL Process Statement warning at teclado_matricial.vhd(100): signal "band" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/teclado_matricial.vhd Line: 100
+Warning (10492): VHDL Process Statement warning at teclado_matricial.vhd(108): signal "band" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/teclado_matricial.vhd Line: 108
+Warning (10492): VHDL Process Statement warning at teclado_matricial.vhd(109): signal "n" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/teclado_matricial.vhd Line: 109
+Warning (10492): VHDL Process Statement warning at teclado_matricial.vhd(110): signal "n" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/teclado_matricial.vhd Line: 110
+Warning (10631): VHDL Process Statement warning at teclado_matricial.vhd(42): inferring latch(es) for signal or variable "tempTecla", which holds its previous value in one or more paths through the process File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/teclado_matricial.vhd Line: 42
+Warning (10631): VHDL Process Statement warning at teclado_matricial.vhd(42): inferring latch(es) for signal or variable "band", which holds its previous value in one or more paths through the process File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/teclado_matricial.vhd Line: 42
+Warning (10631): VHDL Process Statement warning at teclado_matricial.vhd(42): inferring latch(es) for signal or variable "n", which holds its previous value in one or more paths through the process File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/teclado_matricial.vhd Line: 42
+Info (10041): Inferred latch for "tempTecla[0]" at teclado_matricial.vhd(42) File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/teclado_matricial.vhd Line: 42
+Info (10041): Inferred latch for "tempTecla[1]" at teclado_matricial.vhd(42) File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/teclado_matricial.vhd Line: 42
+Info (10041): Inferred latch for "tempTecla[2]" at teclado_matricial.vhd(42) File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/teclado_matricial.vhd Line: 42
+Info (10041): Inferred latch for "tempTecla[3]" at teclado_matricial.vhd(42) File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/teclado_matricial.vhd Line: 42
+Info (12128): Elaborating entity "Act_Display" for hierarchy "Act_Display:inst17"
+Info (12128): Elaborating entity "num_Display" for hierarchy "num_Display:inst57"
+Warning (13012): Latch teclado_matricial:inst15|tempTecla[3] has unsafe behavior File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/teclado_matricial.vhd Line: 42
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Ent[3]
+Warning (13012): Latch teclado_matricial:inst15|tempTecla[2] has unsafe behavior File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/teclado_matricial.vhd Line: 42
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Ent[3]
+Warning (13012): Latch teclado_matricial:inst15|tempTecla[1] has unsafe behavior File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/teclado_matricial.vhd Line: 42
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Ent[3]
+Warning (13012): Latch teclado_matricial:inst15|tempTecla[0] has unsafe behavior File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/teclado_matricial.vhd Line: 42
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado_matricial:inst15|Sal[3] File: C:/Users/Estudiante/Downloads/hoy3.4/proyecto 5/Bloques/teclado_matricial.vhd Line: 23
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "Hex0[3]" is stuck at VCC
+    Warning (13410): Pin "Hex1[3]" is stuck at VCC
+    Warning (13410): Pin "Hex1[2]" is stuck at VCC
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 419 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
+    Info (21059): Implemented 56 output pins
+    Info (21061): Implemented 355 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 35 warnings
+    Info: Peak virtual memory: 4940 megabytes
+    Info: Processing ended: Mon Sep 04 11:37:22 2023
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:12
+
+

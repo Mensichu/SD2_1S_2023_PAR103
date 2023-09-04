@@ -1,0 +1,15 @@
+
+State Machine - |Proyecto_Test1|mss:inst3|y
+Name y.Tl y.Tk y.Tj y.Ti y.Th y.Tg y.Tf y.Te y.Td y.Tc y.Tb y.Ta 
+y.Ta 0 0 0 0 0 0 0 0 0 0 0 0 
+y.Tb 0 0 0 0 0 0 0 0 0 0 1 1 
+y.Tc 0 0 0 0 0 0 0 0 0 1 0 1 
+y.Td 0 0 0 0 0 0 0 0 1 0 0 1 
+y.Te 0 0 0 0 0 0 0 1 0 0 0 1 
+y.Tf 0 0 0 0 0 0 1 0 0 0 0 1 
+y.Tg 0 0 0 0 0 1 0 0 0 0 0 1 
+y.Th 0 0 0 0 1 0 0 0 0 0 0 1 
+y.Ti 0 0 0 1 0 0 0 0 0 0 0 1 
+y.Tj 0 0 1 0 0 0 0 0 0 0 0 1 
+y.Tk 0 1 0 0 0 0 0 0 0 0 0 1 
+y.Tl 1 0 0 0 0 0 0 0 0 0 0 1 

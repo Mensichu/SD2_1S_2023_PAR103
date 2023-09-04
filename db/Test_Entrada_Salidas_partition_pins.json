@@ -1,0 +1,253 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Led_Out_AC22",
+					"strict" : false
+				},
+				{
+					"name" : "Clave_listo",
+					"strict" : false
+				},
+				{
+					"name" : "Clave_correcto",
+					"strict" : false
+				},
+				{
+					"name" : "Estado_IN",
+					"strict" : false
+				},
+				{
+					"name" : "Estado_PA",
+					"strict" : false
+				},
+				{
+					"name" : "Estado_ER",
+					"strict" : false
+				},
+				{
+					"name" : "Estado_AL",
+					"strict" : false
+				},
+				{
+					"name" : "Led_Ok",
+					"strict" : false
+				},
+				{
+					"name" : "Led_Wrong",
+					"strict" : false
+				},
+				{
+					"name" : "Alarma",
+					"strict" : false
+				},
+				{
+					"name" : "Hex0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex4[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex4[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex4[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex5[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex5[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex5[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex5[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex5[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex5[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Hex5[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Sal[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Sal[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Sal[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Sal[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clock_50_AF14",
+					"strict" : false
+				},
+				{
+					"name" : "resetn_AJ4",
+					"strict" : false
+				},
+				{
+					"name" : "Ent[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Ent[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Ent[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Ent[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Boton_Start_AK4",
+					"strict" : false
+				},
+				{
+					"name" : "Sensor_AB30",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
